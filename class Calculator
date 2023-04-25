@@ -1,0 +1,38 @@
+class Calculator {
+  int addTwonumbers(int x, int y) {
+    return x + y;
+  }
+
+  int divTwonumbers(int x, int y) {
+    if (y == 0) {
+      throw Exception('Cant be divided to zero');
+    }
+    return x ~/ y;
+  }
+
+  int multiplyTwonumbers(int x, int y) {
+    return x * y;
+  }
+
+  int subTwonumbers(int x, int y) {
+    return x - y;
+  }
+
+  void runCalculator(int num1, int num2) {
+    Calculator calc = Calculator();
+
+    int sum = calc.addTwonumbers(num1, num2);
+    int prod = calc.multiplyTwonumbers(num1, num2);
+    int quotient = calc.divTwonumbers(num1, num2);
+    int diff = calc.subTwonumbers(num1, num2);
+
+    print('The sum is $sum');
+    print('The product is $prod');
+    print('The quotient $quotient');
+    print('The difference is $diff');
+  }
+}
+
+void main() {
+  Calculator().runCalculator(4, 2);
+}
